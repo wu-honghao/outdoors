@@ -1,0 +1,39 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    // outline-offset CSS 属性用于设置 outline 与一个元素边缘或边框之间的间隙。
+    outline-offset: 2rem;
+
+    &--p1 {
+      top: -2rem;
+    }
+
+    &--p2 {
+      top: 2rem;
+      right: 0;
+    }
+
+    &--p3 {
+      top: 10rem;
+      left: 20%;
+    }
+
+    &:hover {
+      z-index: 20;
+      transform: scale(1.05);
+      // outline 属性是在一条声明中设置多个轮廓属性的简写属性
+      outline: 1.5rem solid $color-primary;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+    }
+  }
+
+  //.composition:hover .composition__photo:not(:hover) 当.composition被选中的时候，.composition__photo除了目前处于hover的状态的其他元素。
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}
