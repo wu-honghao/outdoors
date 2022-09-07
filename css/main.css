@@ -5,19 +5,11 @@
 
 html {
   transform: 0.5s;
-  font-size: 8px; }
+  font-size: 75%; }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-
-@media screen and (min-width: 960px) {
-  html {
-    font-size: 9px; } }
-
-@media screen and (min-width: 1920px) {
-  html {
-    font-size: 10px; } }
 
 @keyframes moveInLeft {
   0% {
@@ -57,13 +49,13 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 4rem; }
-  .heading-primary--main {
+  .heading-primary_main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3rem;
     animation: moveInLeft 3s; }
-  .heading-primary--sub {
+  .heading-primary_sub {
     display: block;
     font-size: 2rem;
     font-weight: 400;
@@ -105,30 +97,32 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../image/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
 .section-about {
   background-color: #f7f7f7;
   padding: 50rem 0;
-  margin-top: -20vh; }
+  margin-top: -20rem; }
+
+.section-feature {
+  position: relative;
+  padding: 50rem 0;
+  transform: skewY(-7deg);
+  margin-top: -12rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../image/nat-1-large.jpg);
+  background-size: cover; }
+  .section-feature > .row {
+    height: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -150,7 +144,7 @@ body {
   transform: translateY(1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn--white {
+.btn_white {
   background-color: #fff;
   color: #777; }
 
@@ -166,10 +160,10 @@ body {
   z-index: -1;
   transition: all 0.4s; }
 
-.btn--white:after {
+.btn_white:after {
   background-color: white; }
 
-.btn--animatied {
+.btn_animatied {
   animation: moveInBottom 2s ease-in; }
 
 .btn-text:link, .btn-text:visited {
@@ -199,21 +193,91 @@ body {
     z-index: 10;
     transition: all 0.2s;
     outline-offset: 2rem; }
-    .composition__photo--p1 {
+    .composition__photo_p1 {
       top: -2rem; }
-    .composition__photo--p2 {
+    .composition__photo_p2 {
       top: 2rem;
       right: 0; }
-    .composition__photo--p3 {
+    .composition__photo_p3 {
       top: 10rem;
       left: 20%; }
     .composition__photo:hover {
       z-index: 20;
       transform: scale(1.05);
       outline: 1.5rem solid #55c57a;
-      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      border-radius: 0.5rem; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
+
+.feature-box {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  border-radius: 0.5rem; }
+  .feature-box__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: scale(1.05) translateY(-2rem); }
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side_front {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    height: 52rem;
+    width: 100%;
+    transition: all 0.8s ease; }
+  .card__side_back {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    height: 52rem;
+    width: 100%;
+    transition: all 0.8s ease;
+    transform: rotateY(180deg); }
+    .card__side_back-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card:hover .card__side_front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side_back {
+    transform: rotateY(0); }
+  .card__picture {
+    -webkit-background-blend-mode: screen;
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 40%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__picture-1 {
+      background-image: linear-gradient(to right, #ffb900, #ff7730), url(../image/nat-5.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    right: 2rem;
+    top: 20%;
+    width: 70%; }
+  .card__heading-span {
+    color: white;
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span_1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
 
 .row {
   max-width: 114rem;
@@ -240,3 +304,23 @@ body {
     width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  padding: 50rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../image/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80rem, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

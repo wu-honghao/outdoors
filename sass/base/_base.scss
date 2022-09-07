@@ -6,22 +6,10 @@
 
 html {
   transform: 0.5s;
-  font-size: 8px;
+  font-size: 75%;
 }
 
 body {
   box-sizing: border-box;
   padding: 3rem;
-}
-
-@media screen and (min-width: 960px) {
-  html {
-    font-size: 9px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  html {
-    font-size: 10px;
-  }
 }

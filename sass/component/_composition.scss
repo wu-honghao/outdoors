@@ -9,16 +9,16 @@
     // outline-offset CSS 属性用于设置 outline 与一个元素边缘或边框之间的间隙。
     outline-offset: 2rem;
 
-    &--p1 {
+    &_p1 {
       top: -2rem;
     }
 
-    &--p2 {
+    &_p2 {
       top: 2rem;
       right: 0;
     }
 
-    &--p3 {
+    &_p3 {
       top: 10rem;
       left: 20%;
     }
@@ -29,6 +29,7 @@
       // outline 属性是在一条声明中设置多个轮廓属性的简写属性
       outline: 1.5rem solid $color-primary;
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      border-radius: 0.5rem;
     }
   }
 

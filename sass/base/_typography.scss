@@ -14,7 +14,7 @@ body {
 
   margin-bottom: 4rem;
 
-  &--main {
+  &_main {
     display: block;
 
     font-size: 6rem;
@@ -24,7 +24,7 @@ body {
     animation: moveInLeft 3s;
   }
 
-  &--sub {
+  &_sub {
     display: block;
 
     font-size: 2rem;

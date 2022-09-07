@@ -24,7 +24,7 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
-  &--white {
+  &_white {
     background-color: $color-white;
     color: $color-grey-dark;
   }
@@ -42,11 +42,11 @@
     transition: all 0.4s;
   }
 
-  &--white:after {
+  &_white:after {
     background-color: white;
   }
 
-  &--animatied {
+  &_animatied {
     animation: moveInBottom 2s ease-in;
   }
 }
