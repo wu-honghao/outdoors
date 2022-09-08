@@ -10,8 +10,8 @@
 
   &__side_front {
     position: absolute;
-    background-color: rgba($color-white, 0.8);
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+    background-color: rgba($color-white, 0.5);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.1);
     backface-visibility: hidden;
 
     height: 52rem;
@@ -37,6 +37,22 @@
         to right bottom,
         $color-secondary-light,
         $color-secondary-dark
+      );
+    }
+
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
+
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-light,
+        $color-tertiary-dark
       );
     }
   }
@@ -66,6 +82,24 @@
         ),
         url(../image/nat-5.jpg);
     }
+
+    &-2 {
+      background-image: linear-gradient(
+          to right,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../image/nat-6.jpg);
+    }
+
+    &-3 {
+      background-image: linear-gradient(
+          to right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../image/nat-7.jpg);
+    }
   }
 
   &__heading {
@@ -90,9 +124,74 @@
     &_1 {
       background-image: linear-gradient(
         to right bottom,
-        rgba(255, 185, 0, 0.85),
-        rgba(255, 119, 48, 0.85)
+        $color-secondary-light,
+        $color-secondary-dark
       );
+    }
+
+    &_2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
+
+    &_3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-light,
+        $color-tertiary-dark
+      );
+    }
+  }
+
+  &__details {
+    text-align: center;
+
+    ul {
+      // 去除项目符号
+      list-style: none;
+      width: 70%;
+      margin: 3.5rem auto;
+
+      li {
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    > .btn {
+      z-index: 10;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+
+  &__price {
+    &-box {
+      color: white;
+    }
+
+    &-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &-value {
+      font-size: 6rem;
+      font-weight: 100;
     }
   }
 }
