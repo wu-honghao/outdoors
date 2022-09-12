@@ -29,6 +29,11 @@
     color: $color-grey-dark;
   }
 
+  &_green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
   &::after {
     content: "";
     display: inline-block;
@@ -43,8 +48,13 @@
   }
 
   &_white:after {
-    background-color: white;
+    background-color: $color-white;
   }
+
+  &_green:after {
+    background-color: $color-primary;
+  }
+
 
   &_animatied {
     animation: moveInBottom 2s ease-in;
