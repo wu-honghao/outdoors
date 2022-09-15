@@ -24,6 +24,7 @@
 
     &__text {
         transform: skewX(12deg);
+        font-size: $default-font-size;
     }
 
     &__img {

@@ -1,12 +1,12 @@
 .section-about {
     background-color: $color-grey-light-1;
-    padding: 50rem 0;
+    padding: 20rem 0;
     margin-top: -20rem;
 }
 
 .section-feature {
     position: relative;
-    padding: 50rem 0;
+    padding: 30rem 0;
     transform: skewY(-7deg);
     margin-top: -12rem;
 
@@ -27,6 +27,7 @@
 }
 
 .section-tours {
+    font-size: $default-font-size;
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
