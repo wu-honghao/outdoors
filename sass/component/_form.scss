@@ -1,0 +1,111 @@
+.form {
+    width: 50%;
+    position: relative;
+    top: -1rem;
+    left: -2rem;
+
+    &__group:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    &__input {
+        padding: 1.5rem 2rem;
+        outline: none;
+        border: none;
+
+        width: 90%;
+        display: block;
+
+        font-size: 1.3rem;
+
+        border-bottom: 3px solid transparent;
+        transition: all 0.5s;
+
+        // 表示表单元素的占位符文本
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+
+        &:focus {
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+
+        transition: all 0.2s;
+
+        display: inline-block;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+
+    &__radio-group {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+
+        position: relative;
+
+        padding-left: 3.5rem;
+
+        cursor: pointer;
+    }
+
+    &__radio-button {
+        height: 2.5rem;
+        width: 2.5rem;
+
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+
+        display: inline-block;
+
+        position: absolute;
+        top: -0.5rem;
+        left: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            // 大小
+            height: 70%;
+            width: 70%;
+
+            // 定位
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            // 外观
+            background-color: $color-primary;
+            border-radius: 50%;
+            opacity: 0;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+}
