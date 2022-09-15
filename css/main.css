@@ -172,7 +172,7 @@ body {
     color: #55c57a;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
     transform: rotate(5deg) scale(1.5); }
-  .footer__navagation {
+  .footer__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
@@ -506,7 +506,7 @@ body {
   .form__radio-input {
     display: none; }
 
-.navagation__back {
+.navigation__back {
   height: 5rem;
   width: 5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
@@ -517,7 +517,7 @@ body {
   z-index: 1000;
   transition: all 0.8s; }
 
-.navagation__label {
+.navigation__label {
   height: 6rem;
   width: 6rem;
   background-color: #fff;
@@ -529,10 +529,10 @@ body {
   z-index: 2000;
   cursor: pointer; }
 
-.navagation__checkbox {
+.navigation__checkbox {
   display: none; }
 
-.navagation__nav {
+.navigation__nav {
   height: 100vh;
   width: 0;
   transform: translate(-30rem);
@@ -543,7 +543,7 @@ body {
   z-index: 1500;
   transition: all 0.5s; }
 
-.navagation__list {
+.navigation__list {
   list-style: none;
   text-align: center;
   position: absolute;
@@ -552,12 +552,12 @@ body {
   transform: translate(-50%, -50%);
   z-index: 1500; }
 
-.navagation__item {
+.navigation__item {
   margin-bottom: 1rem;
   display: block;
   transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
 
-.navagation__link:link, .navagation__link:visited {
+.navigation__link:link, .navigation__link:visited {
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -571,46 +571,46 @@ body {
   font-weight: 300;
   transition: all 0.5s; }
 
-.navagation__link:hover, .navagation__link:active {
+.navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(1rem); }
 
-.navagation__checkbox:checked ~ .navagation__back {
+.navigation__checkbox:checked ~ .navigation__back {
   transform: scale(80); }
 
-.navagation__checkbox:checked ~ .navagation__nav {
+.navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
   transform: translate(0); }
 
-.navagation__icon {
+.navigation__icon {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s; }
-  .navagation__icon, .navagation__icon::after, .navagation__icon::before {
+  transition: transform 0.5s; }
+  .navigation__icon, .navigation__icon::after, .navigation__icon::before {
     display: inline-block;
     width: 3rem;
     height: 2px;
     background-color: #777; }
-  .navagation__icon, .navagation__icon::after, .navagation__icon::before {
+  .navigation__icon, .navigation__icon::after, .navigation__icon::before {
     content: '';
     position: absolute; }
-  .navagation__icon::before {
+  .navigation__icon::before {
     top: -0.8rem; }
-  .navagation__icon::after {
+  .navigation__icon::after {
     top: 0.8rem; }
 
-.navagation__checkbox:checked + .navagation__label .navagation__icon {
+.navigation__checkbox:checked + .navigation__label .navigation__icon {
   background-color: transparent; }
 
-.navagation__checkbox:checked + .navagation__label .navagation__icon::before {
+.navigation__checkbox:checked + .navigation__label .navigation__icon::before {
   top: 0;
   transform: rotate(45deg); }
 
-.navagation__checkbox:checked + .navagation__label .navagation__icon::after {
+.navigation__checkbox:checked + .navigation__label .navigation__icon::after {
   top: 0;
   transform: rotate(-45deg); }
 

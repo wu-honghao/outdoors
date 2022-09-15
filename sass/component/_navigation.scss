@@ -1,4 +1,4 @@
-.navagation {
+.navigation {
     &__back {
         height: 5rem;
         width: 5rem;
@@ -109,7 +109,7 @@
 
     &__icon {
         @include boxCenter;
-        transition: transform 0.2s;
+        transition: transform 0.5s;
 
         &,
         &::after,
