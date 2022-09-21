@@ -12,6 +12,12 @@
     opacity: 0;
     visibility: hidden;
 
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
     &__content {
         background-color: $color-white;
         width: 75%;
@@ -54,7 +60,7 @@
     &__text {
         margin-bottom: 4rem;
 
-        font-size: 1.1rem;
+        font-size: 1.4rem;
 
         column-count: 2;
         column-gap: 4rem;

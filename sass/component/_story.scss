@@ -8,6 +8,10 @@
 
     transform: skewX(-12deg);
 
+    @include response(tab-port) {
+        transform: skewX(0);
+    }
+
     &__shape {
         float: left;
         width: 15rem;
@@ -19,12 +23,20 @@
 
         transform: translateX(-1rem) skewX(12deg);
 
+        @include response(tab-port) {
+            transform: translateX(-1rem) skewX(0deg);
+        }
+
         position: relative;
     }
 
     &__text {
         transform: skewX(12deg);
         font-size: $default-font-size;
+
+        @include response(tab-port) {
+            transform: skewX(0deg);
+        }
     }
 
     &__img {

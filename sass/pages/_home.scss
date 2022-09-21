@@ -4,7 +4,7 @@
     margin-top: -20rem;
 
     @include response(tab-port) {
-        padding: 20rem 10rem 60rem 10rem;
+        padding: 20rem 10rem 25rem 10rem;
     }
 }
 
@@ -66,6 +66,16 @@
     &__form {
         height: 50%;
         padding: 5rem;
+    }
+
+    @include response(tab-port) {
+        background-image: linear-gradient(
+                105deg,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(255, 255, 255, 0.9) 80%,
+                transparent 80%
+            ),
+            url(../image/nat-10.jpg);
     }
 }
 

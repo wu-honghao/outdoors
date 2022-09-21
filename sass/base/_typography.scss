@@ -21,6 +21,10 @@ body {
         letter-spacing: 3rem;
 
         animation: moveInLeft 3s;
+
+        @include response(tab-port) {
+            letter-spacing: 1.5rem;
+        }
     }
 
     &_sub {
@@ -31,6 +35,10 @@ body {
         letter-spacing: 1.6rem;
 
         animation: moveInRight 3s;
+
+        @include response(tab-port) {
+            letter-spacing: 1rem;
+        }
     }
 }
 
