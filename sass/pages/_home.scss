@@ -2,6 +2,10 @@
     background-color: $color-grey-light-1;
     padding: 20rem 0;
     margin-top: -20rem;
+
+    @include response(tab-port) {
+        padding: 20rem 10rem 60rem 10rem;
+    }
 }
 
 .section-feature {
@@ -23,6 +27,14 @@
         left: 0;
         right: 0;
         transform: skewY(7deg);
+
+        @include response(tab-port) {
+            position: relative;
+        }
+    }
+
+    @include response(tab-port) {
+        padding: 10rem;
     }
 }
 
@@ -47,7 +59,6 @@
     background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 50%, transparent 50%),
         url(../image/nat-10.jpg);
     background-size: cover;
-    background-size: 100%;
 
     width: 85%;
     margin: 0 auto;
@@ -69,6 +80,10 @@
 
     > .row {
         max-width: 90rem;
+
+        @include response(tab-port) {
+            text-align: center;
+        }
     }
 
     &__list {
@@ -112,5 +127,10 @@
         width: 80%;
         float: right;
         color: $color-white;
+
+        @include response(tab-port) {
+            float: none;
+            margin: 0 auto;
+        }
     }
 }
