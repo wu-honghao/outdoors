@@ -12,6 +12,11 @@
         margin: 0 auto;
     }
 
+    @include response(phone) {
+        width: 70%;
+        margin: 0 auto;
+    }
+
     &__side_front {
         position: absolute;
         background-color: rgba($color-white, 0.5);

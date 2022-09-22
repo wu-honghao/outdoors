@@ -38,7 +38,7 @@
 
         display: table-cell;
 
-        // vertical-align: middle;
+        vertical-align: middle;
     }
 
     &__right {
@@ -90,5 +90,15 @@
 
     &:target > &__content {
         transform: translate(-50%, -50%) scale(1);
+    }
+
+    @include response(tab-port) {
+        &__content {
+            width: 100%;
+        }
+
+        &:target > &__content {
+            transform: translate(-50%, -50%) scale(0.7);
+        }
     }
 }

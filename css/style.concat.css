@@ -817,6 +817,10 @@ body {
     .card {
       width: 50%;
       margin: 0 auto; } }
+  @media screen and (max-width: 37.5em) {
+    .card {
+      width: 70%;
+      margin: 0 auto; } }
   .card__side_front {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
@@ -1182,7 +1186,8 @@ body {
     transition: all 0.5s; }
   .popup__left {
     width: 33.333%;
-    display: table-cell; }
+    display: table-cell;
+    vertical-align: middle; }
   .popup__right {
     width: 66.667%;
     display: table-cell;
@@ -1211,6 +1216,11 @@ body {
     visibility: visible; }
   .popup:target > .popup__content {
     transform: translate(-50%, -50%) scale(1); }
+  @media screen and (max-width: 56.25em) {
+    .popup__content {
+      width: 100%; }
+    .popup:target > .popup__content {
+      transform: translate(-50%, -50%) scale(0.7); } }
 
 .row {
   max-width: 114rem;
