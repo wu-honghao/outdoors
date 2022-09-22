@@ -8,7 +8,7 @@
     width: 100%;
 
     @include response(tab-port) {
-        width: 70%;
+        width: 50%;
         margin: 0 auto;
     }
 
@@ -160,6 +160,31 @@
         &-value {
             font-size: 6rem;
             font-weight: 100;
+        }
+    }
+
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+        height: auto;
+
+        &__side_front {
+            position: relative;
+        }
+
+        &__side_back {
+            transform: rotateY(0deg);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            height: 30rem;
+
+            position: relative;
+            top: -5rem;
+        }
+
+        &:hover &__side_front {
+            transform: rotateY(0);
+        }
+
+        &__details {
+            transform: translateY(-2rem);
         }
     }
 }
